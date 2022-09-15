@@ -62,7 +62,7 @@ pipeline{
         stage('Deploy - Production') {
             environment {
                 APP_NAMESPACE = "shopping-cart-production"
-                QAUY = credentials('QUAY_USER')
+                QUAY = credentials('QUAY_USER')
             }
             input {message 'Deploy to production'}
             steps {
